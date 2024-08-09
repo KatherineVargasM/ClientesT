@@ -34,6 +34,22 @@ namespace Clientes
             lst_Clientes.DisplayMember = "NombreCompleto";
             lst_Clientes.ValueMember = "IdCliente";
         }
+        
+        private void lst_Clientes_DoubleClick(object sender, EventArgs e)
+        {
+            if (lst_Clientes.SelectedItem != null)
+            {
+                ClientesModel clienteSeleccionado = (ClientesModel)lst_Clientes.SelectedItem;
+                string mensaje = $"Nombres:   {clienteSeleccionado.Nombres}\n" +
+                                 $"Apellidos: {clienteSeleccionado.Apellidos}\n" +
+                                 $"Direccion: {clienteSeleccionado.Direccion}\n" +
+                                 $"Telefono:  {clienteSeleccionado.Telefono}\n" +
+                                 $"Correo:    {clienteSeleccionado.Correo}";
+                                 
+
+                MessageBox.Show(mensaje, "Información del Cliente");
+            }
+        }
 
         private void btn_Modificar_Click(object sender, EventArgs e)
         {
@@ -132,6 +148,6 @@ namespace Clientes
             lst_Clientes.ClearSelected();
         }
 
-
+        
     }
 }

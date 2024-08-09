@@ -130,6 +130,7 @@
             this.lst_Clientes.Name = "lst_Clientes";
             this.lst_Clientes.Size = new System.Drawing.Size(539, 144);
             this.lst_Clientes.TabIndex = 9;
+            this.lst_Clientes.DoubleClick += new System.EventHandler(this.lst_Clientes_DoubleClick);
             // 
             // lbl_Nombres
             // 
